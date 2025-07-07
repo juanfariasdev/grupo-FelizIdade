@@ -32,10 +32,10 @@ export function TestimonialsSection() {
               </blockquote>
             </CardContent>
             <CardFooter className="p-0 mt-6 flex items-center gap-4">
-              <Avatar className="h-12 w-12 border-2 border-white/30">
+              {/* <Avatar className="h-12 w-12 border-2 border-white/30">
                 <AvatarImage src={`https://placehold.co/48x48.png`} alt={`Foto de ${selectedTestimonial?.name}`} data-ai-hint="woman portrait" />
                 <AvatarFallback className="bg-black/20 font-semibold text-white">{selectedTestimonial?.avatar}</AvatarFallback>
-              </Avatar>
+              </Avatar> */}
               <div>
                 <p className="font-semibold text-white">{selectedTestimonial?.name}</p>
                 <p className="text-base text-white/80">Membro do Grupo</p>
@@ -48,10 +48,10 @@ export function TestimonialsSection() {
               <Card key={index} className="bg-white/10 rounded-xl shadow-md border-white/20 text-white">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <Avatar>
+                    {/* <Avatar>
                       <AvatarImage src={`https://placehold.co/40x40.png`} alt={`Foto de ${testimonial.name}`} data-ai-hint="person portrait" />
                       <AvatarFallback className="bg-black/20 font-semibold text-white">{testimonial.avatar}</AvatarFallback>
-                    </Avatar>
+                    </Avatar> */}
                     <div>
                       <p className="font-semibold text-white">{testimonial.name}</p>
                       <p className="text-white/80 text-base mt-2">“{testimonial.text}”</p>
