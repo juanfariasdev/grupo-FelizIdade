@@ -93,7 +93,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className={cn("w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-md", {
+        <Button type="submit" className={cn("w-full shadow-md", {
           'opacity-50 cursor-not-allowed': form.formState.isSubmitting
         })} disabled={form.formState.isSubmitting}>
           {form.formState.isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}

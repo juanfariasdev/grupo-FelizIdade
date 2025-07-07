@@ -84,32 +84,42 @@ export default function Home() {
             <Link href="#events" className="transition-colors hover:text-primary">Eventos</Link>
             <Link href="#contact" className="transition-colors hover:text-primary">Contato</Link>
           </nav>
-          <Button asChild className="hidden md:flex bg-accent text-accent-foreground hover:bg-accent/90 shadow-sm">
+          <Button asChild className="hidden md:flex shadow-sm">
             <Link href="#contact">Junte-se a Nós</Link>
           </Button>
         </div>
       </header>
 
       <main className="flex-1">
-        <section className="relative w-full py-20 md:py-32 lg:py-40">
-            <div className="container mx-auto px-4 md:px-6 text-center">
-                <div className="max-w-3xl mx-auto">
-                    <h1 className="font-headline text-4xl font-bold tracking-tighter text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl">
-                        Celebrando a Vida em Todas as Idades
-                    </h1>
-                    <p className="mt-6 max-w-xl mx-auto text-lg text-gray-600">
-                        No Grupo FelizIdade, descobrimos novas amizades, compartilhamos experiências e vivemos cada momento com alegria e vitalidade.
-                    </p>
-                    <div className="mt-8 flex flex-wrap justify-center gap-4">
-                        <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-md">
-                            <Link href="#contact">Quero Participar</Link>
-                        </Button>
-                        <Button asChild size="lg" variant="outline" className="shadow-sm">
-                            <Link href="#about">Saiba Mais</Link>
-                        </Button>
-                    </div>
-                </div>
-            </div>
+        <section className="relative w-full h-[70vh] min-h-[500px] flex items-center justify-center">
+          <div className="absolute inset-0 w-full h-full">
+            <Image
+              src="https://placehold.co/1920x1080.png"
+              alt="Grupo de idosos felizes"
+              fill={true}
+              className="object-cover"
+              data-ai-hint="happy seniors group"
+            />
+            <div className="absolute inset-0 bg-blue-900/70" />
+          </div>
+          <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
+              <div className="max-w-3xl mx-auto">
+                  <h1 className="font-headline text-4xl font-bold tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl">
+                      Celebrando a Vida em Todas as Idades
+                  </h1>
+                  <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-200">
+                    Somos um grupo dedicado ao bem-estar e integração dos idosos da cidade de Machado. Aqui, você encontra informações sobre as atividades, depoimentos, apoiadores e muito mais.
+                  </p>
+                  <div className="mt-8 flex flex-wrap justify-center gap-4">
+                      <Button asChild size="lg" className="shadow-md">
+                          <Link href="#contact">Quero Participar</Link>
+                      </Button>
+                      <Button asChild size="lg" className="shadow-sm">
+                          <Link href="#about">Saiba Mais</Link>
+                      </Button>
+                  </div>
+              </div>
+          </div>
         </section>
 
         <section id="about" className="w-full py-16 md:py-24 bg-card">
