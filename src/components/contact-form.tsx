@@ -19,7 +19,7 @@ import { cn } from "@/lib/utils";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Nome deve ter pelo menos 2 caracteres." }),
-  email: z.string().email({ message: "Por favor, insira um email válido." }),
+  phone: z.string().min(10, { message: "Por favor, insira um telefone válido com DDD." }),
   message: z.string().min(10, { message: "A mensagem deve ter pelo menos 10 caracteres." }),
 });
 
@@ -29,7 +29,7 @@ export function ContactForm() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      email: "",
+      phone: "",
       message: "",
     },
   });
@@ -54,7 +54,7 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nome</FormLabel>
+              <FormLabel>Nome Completo</FormLabel>
               <FormControl>
                 <Input placeholder="Seu nome completo" {...field} />
               </FormControl>
@@ -64,12 +64,12 @@ export function ContactForm() {
         />
         <FormField
           control={form.control}
-          name="email"
+          name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>Telefone</FormLabel>
               <FormControl>
-                <Input placeholder="seu.email@exemplo.com" {...field} />
+                <Input placeholder="(XX) XXXXX-XXXX" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -93,7 +93,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className={cn("w-full shadow-md rounded-full", {
+        <Button type="submit" className={cn("w-full", {
           'opacity-50 cursor-not-allowed': form.formState.isSubmitting
         })} disabled={form.formState.isSubmitting}>
           {form.formState.isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
