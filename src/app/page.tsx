@@ -272,7 +272,7 @@ export default function Home() {
             </div>
             <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {galleryImages.map((image, index) => (
-                <Card key={index} className="overflow-hidden group transition-shadow hover:shadow-xl">
+                <Card key={index} className="overflow-hidden group flex flex-col transition-shadow hover:shadow-xl">
                   <div className="overflow-hidden">
                     <Image
                       src={image.src}
@@ -283,10 +283,15 @@ export default function Home() {
                       data-ai-hint={image.hint}
                     />
                   </div>
-                  <div className="p-4">
+                  <CardContent className="flex-grow p-6">
                     <h3 className="font-headline text-xl font-bold text-card-foreground">{image.title}</h3>
                     <p className="mt-2 text-muted-foreground">{image.description}</p>
-                  </div>
+                  </CardContent>
+                  <CardFooter className="p-6 pt-0">
+                    <Button asChild>
+                      <Link href="#">Ver fotos</Link>
+                    </Button>
+                  </CardFooter>
                 </Card>
               ))}
             </div>
