@@ -122,27 +122,31 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="w-full py-16 md:py-24 bg-card">
-          <div className="container mx-auto grid max-w-7xl items-center gap-8 px-4 md:grid-cols-2 md:px-6 lg:gap-16">
+        <section id="about" className="w-full py-16 md:py-24 bg-primary text-primary-foreground">
+          <div className="container mx-auto max-w-4xl space-y-8 px-4 text-center md:px-6">
             <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground">Sobre Nós</div>
-              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Nossa Missão: Conectar e Inspirar</h2>
-              <p className="text-gray-600 md:text-lg">
-                O Grupo FelizIdade nasceu do desejo de criar um ambiente acolhedor e vibrante para a terceira idade. Nossa missão é promover o bem-estar, a socialização e o aprendizado contínuo, oferecendo atividades que enriquecem o corpo, a mente e a alma.
-              </p>
-              <p className="text-gray-600 md:text-lg">
-                Valorizamos a amizade, o respeito e a alegria de viver. Ao longo de nossa história, construímos uma comunidade unida, onde cada membro é parte essencial de nossa grande família.
+              <div className="inline-block rounded-lg bg-primary-foreground/10 px-3 py-1 text-sm font-medium">Sobre Nós</div>
+              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Conectando Gerações com Alegria</h2>
+              <p className="mx-auto max-w-3xl md:text-xl">
+                O Grupo FelizIdade nasceu do desejo de criar um ambiente acolhedor e vibrante para a terceira idade, onde cada membro é parte essencial de nossa grande família.
               </p>
             </div>
-            <div className="flex justify-center">
-                <Image
-                    src="https://placehold.co/600x500.png"
-                    width={600}
-                    height={500}
-                    alt="Membros do Grupo FelizIdade sorrindo"
-                    className="rounded-xl shadow-lg"
-                    data-ai-hint="happy seniors group"
-                />
+            <div className="grid gap-8 pt-6 md:grid-cols-2">
+              <div className="space-y-2 text-left">
+                <h3 className="font-headline text-2xl font-bold text-center md:text-left">Nossa Missão</h3>
+                <p>
+                  Promover o bem-estar, a socialização e o aprendizado contínuo, oferecendo atividades que enriquecem o corpo, a mente e a alma de nossos membros.
+                </p>
+              </div>
+              <div className="space-y-2 text-left">
+                <h3 className="font-headline text-2xl font-bold text-center md:text-left">Nossos Valores</h3>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Acolhimento e Empatia</li>
+                  <li>Respeito e Amizade</li>
+                  <li>Alegria de Viver</li>
+                  <li>Companheirismo</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
