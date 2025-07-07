@@ -25,9 +25,9 @@ export function ContactSection() {
               Preencha o formulário abaixo para entrar em contato. Se preferir, fale conosco pelo WhatsApp ou venha nos visitar.
             </p>
           </div>
-          <div className="space-y-4">
+          <div>
             <ContactForm />
-            <a href="https://wa.me/553532957045" target="_blank" rel="noopener noreferrer" className="w-full">
+            <a href="https://wa.me/553532957045" target="_blank" rel="noopener noreferrer" className="w-full block mt-4">
               <Button className="w-full bg-[#25D366] hover:bg-[#1EBE57] text-white">
                 <WhatsAppIcon className="h-5 w-5 mr-2"/>
                 Entrar em contato pelo WhatsApp
