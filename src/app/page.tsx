@@ -120,7 +120,7 @@ export default function Home() {
             <Link href="#events" className="transition-colors hover:text-primary">Eventos</Link>
             <Link href="#contact" className="transition-colors hover:text-primary">Contato</Link>
           </nav>
-          <Button asChild className="hidden md:flex shadow-sm">
+          <Button asChild className="hidden md:flex shadow-sm rounded-full bg-primary text-white hover:bg-primary/90">
             <Link href="#contact">Junte-se a Nós</Link>
           </Button>
         </div>
@@ -147,10 +147,10 @@ export default function Home() {
                     Somos um grupo dedicado ao bem-estar e integração dos idosos da cidade de Machado. Aqui, você encontra informações sobre as atividades, depoimentos, apoiadores e muito mais.
                   </p>
                   <div className="mt-8 flex flex-wrap justify-center gap-4">
-                      <Button asChild size="lg" className="shadow-md">
+                      <Button asChild size="lg" className="shadow-md rounded-full bg-primary text-white hover:bg-primary/90">
                           <Link href="#contact">Quero Participar</Link>
                       </Button>
-                      <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                      <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary rounded-full">
                           <Link href="#about">Saiba Mais</Link>
                       </Button>
                   </div>
@@ -261,12 +261,12 @@ export default function Home() {
             </div>
         </section>
 
-        <section id="gallery" className="w-full py-16 md:py-24 bg-secondary/50">
+        <section id="gallery" className="w-full py-16 md:py-24 bg-accent">
           <div className="container mx-auto max-w-7xl px-4 md:px-6">
             <div className="text-center space-y-4">
-              <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground">Galeria</div>
-              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Nossos Momentos Felizes</h2>
-              <p className="max-w-2xl mx-auto text-gray-600 md:text-lg">
+              <div className="inline-block rounded-lg bg-white/30 px-3 py-1 text-sm font-medium text-accent-foreground">Galeria</div>
+              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-accent-foreground">Nossos Momentos Felizes</h2>
+              <p className="max-w-2xl mx-auto text-accent-foreground/90 md:text-lg">
                 Uma imagem vale mais que mil palavras. Explore os momentos de alegria e companheirismo que compartilhamos.
               </p>
             </div>
@@ -284,11 +284,11 @@ export default function Home() {
                     />
                   </div>
                   <CardContent className="flex-grow p-6">
-                    <h3 className="font-headline text-xl font-bold text-card-foreground">{image.title}</h3>
-                    <p className="mt-2 text-muted-foreground">{image.description}</p>
+                    <h3 className="font-headline text-xl font-bold text-accent-foreground">{image.title}</h3>
+                    <p className="mt-2 text-accent-foreground/80">{image.description}</p>
                   </CardContent>
                   <CardFooter className="p-6 pt-0">
-                    <Button asChild>
+                    <Button asChild className="rounded-full bg-primary text-white hover:bg-primary/90">
                       <Link href="#">Ver fotos</Link>
                     </Button>
                   </CardFooter>
