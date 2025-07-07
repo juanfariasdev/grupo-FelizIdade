@@ -46,6 +46,8 @@ export function ContactForm() {
     form.reset();
   }
 
+  const inputStyles = "bg-white/40 border-accent-foreground/30 placeholder:text-accent-foreground/70 focus-visible:ring-accent-foreground";
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -56,7 +58,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Nome Completo</FormLabel>
               <FormControl>
-                <Input placeholder="Seu nome completo" {...field} />
+                <Input placeholder="Seu nome completo" {...field} className={inputStyles} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -69,7 +71,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Telefone</FormLabel>
               <FormControl>
-                <Input placeholder="(XX) XXXXX-XXXX" {...field} />
+                <Input placeholder="(XX) XXXXX-XXXX" {...field} className={inputStyles} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -84,7 +86,7 @@ export function ContactForm() {
               <FormControl>
                 <Textarea
                   placeholder="Deixe sua mensagem aqui..."
-                  className="resize-none"
+                  className={cn("resize-none", inputStyles)}
                   rows={4}
                   {...field}
                 />
@@ -93,7 +95,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className={cn("w-full", {
+        <Button type="submit" className={cn("w-full bg-accent-foreground text-background hover:bg-accent-foreground/90", {
           'opacity-50 cursor-not-allowed': form.formState.isSubmitting
         })} disabled={form.formState.isSubmitting}>
           {form.formState.isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}

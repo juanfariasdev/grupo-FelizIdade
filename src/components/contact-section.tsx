@@ -16,25 +16,27 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export function ContactSection() {
   return (
-    <section id="contact" className="w-full py-16 md:py-24 bg-secondary">
+    <section id="contact" className="w-full py-16 md:py-24 bg-accent text-accent-foreground">
       <div className="container mx-auto grid max-w-7xl items-start gap-12 px-4 md:grid-cols-2 md:px-6 lg:gap-16">
         <div className="space-y-6">
           <div className="space-y-2">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Seja você também um integrante do Grupo FelizIdade!</h2>
-            <p className="text-muted-foreground md:text-lg">
+            <p className="text-accent-foreground/90 md:text-lg">
               Preencha o formulário abaixo para entrar em contato. Se preferir, fale conosco pelo WhatsApp ou venha nos visitar.
             </p>
           </div>
-          <ContactForm />
-          <a href="https://wa.me/553532957045" target="_blank" rel="noopener noreferrer" className="w-full">
-            <Button className="w-full bg-[#25D366] hover:bg-[#1EBE57] text-white">
-              <WhatsAppIcon className="h-5 w-5 mr-2"/>
-              Entrar em contato pelo WhatsApp
-            </Button>
-          </a>
+          <div className="space-y-4">
+            <ContactForm />
+            <a href="https://wa.me/553532957045" target="_blank" rel="noopener noreferrer" className="w-full">
+              <Button className="w-full bg-[#25D366] hover:bg-[#1EBE57] text-white">
+                <WhatsAppIcon className="h-5 w-5 mr-2"/>
+                Entrar em contato pelo WhatsApp
+              </Button>
+            </a>
+          </div>
         </div>
         <div className="space-y-6 flex flex-col h-full">
-          <div className="overflow-hidden rounded-xl shadow-lg border flex-1">
+          <div className="overflow-hidden rounded-xl shadow-lg border border-accent-foreground/20 flex-1">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7415.351620605852!2d-45.921803!3d-21.676465!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ca135d751e224d%3A0x2580060b89fe90d2!2sPra%C3%A7a%20Ant%C3%B4nio%20Carlos%20-%20Machado%2C%20MG%2C%2037750-000!5e0!3m2!1spt-BR!2sbr!4v1751913391285!5m2!1spt-BR!2sbr"
               className="w-full h-full min-h-[400px]"
@@ -47,24 +49,24 @@ export function ContactSection() {
           </div>
           <div className="space-y-4 pt-4">
             <div className="flex items-start gap-4">
-              <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+              <MapPin className="h-6 w-6 text-accent-foreground flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold">Endereço</h3>
-                <p className="text-muted-foreground">Praça Antônio Carlos, 101 - Centro, Machado - MG, 37750-000</p>
+                <p className="text-accent-foreground/90">Praça Antônio Carlos, 101 - Centro, Machado - MG, 37750-000</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <Phone className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+              <Phone className="h-6 w-6 text-accent-foreground flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold">Telefone</h3>
-                <p className="text-muted-foreground">(35) 3295-7045</p>
+                <p className="text-accent-foreground/90">(35) 3295-7045</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <Globe className="h-6 w-6 text-primary flex-shrink-0" />
+              <Globe className="h-6 w-6 text-accent-foreground flex-shrink-0" />
               <div>
                 <h3 className="font-semibold">Site</h3>
-                <a href="https://www.machado.mg.gov.br" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.machado.mg.gov.br" target="_blank" rel="noopener noreferrer" className="text-accent-foreground/90 hover:text-accent-foreground transition-colors">
                   www.machado.mg.gov.br
                 </a>
               </div>
