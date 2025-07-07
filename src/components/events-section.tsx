@@ -31,9 +31,9 @@ export function EventsSection() {
       <div className="relative z-10 container mx-auto max-w-4xl px-4 text-white md:px-6">
         <div className="text-center space-y-4">
           <div className="inline-block rounded-lg bg-white/20 px-3 py-1 text-sm font-medium">Eventos</div>
-          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Nossa Agenda</h2>
+          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Programação Semanal</h2>
           <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
-            Confira nossa programação semanal de atividades físicas. Mantenha-se ativo e saudável conosco!
+            Mantenha-se informado sobre as nossas atividades semanais, planejadas para promover a saúde e o convívio social. Confira a agenda e participe!
           </p>
         </div>
         <Card className="mt-12 shadow-lg rounded-xl bg-white/10 border-white/20 backdrop-blur-sm text-white">
