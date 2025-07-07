@@ -14,18 +14,18 @@ export function Header() {
               src={Logo}
               width={200}
               height={60}
-              alt="Logo Grupo FelizIdade"
+              alt="Logo do Grupo FelizIdade, um coração estilizado ao lado do nome"
               data-ai-hint="group logo"
               className="h-16 w-auto"
             />
           </Link>
           <div className="h-12 w-px bg-border hidden lg:block" />
-          <a href="#" target="_blank" rel="noopener noreferrer" className="hidden lg:block flex items-center">
+          <a href="https://www.machado.mg.gov.br" target="_blank" rel="noopener noreferrer" className="hidden lg:block flex items-center">
             <Image
               src={LogoPrefeitura}
               width={150}
               height={50}
-              alt="Logo da Prefeitura de Machado"
+              alt="Logo da Prefeitura de Machado, patrocinador do grupo"
               data-ai-hint="sponsor logo"
               className="h-12 w-auto"
             />
