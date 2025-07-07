@@ -1,50 +1,50 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 const galleryImages = [
   {
     src: "https://placehold.co/600x400.png",
-    alt: "Grupo em atividade de jardinagem",
-    hint: "seniors gardening",
-    title: "Jardinagem Terapêutica",
-    description: "Conectando-se com a natureza e fortalecendo amizades."
+    alt: "Grupo em um piquenique",
+    hint: "seniors picnic",
+    title: "Piquenique",
+    description: "Momentos de confraternização e alegria ao ar livre, fortalecendo nossos laços de amizade."
   },
   {
     src: "https://placehold.co/600x400.png",
-    alt: "Aula de dança para idosos",
+    alt: "Grupo dançando forró",
     hint: "seniors dancing",
-    title: "Ritmo e Alegria",
-    description: "Nossas aulas de dança mantêm o corpo e a alma em movimento."
+    title: "Forró",
+    description: "Muita dança e animação ao som do tradicional forró, celebrando a cultura e o movimento."
   },
   {
     src: "https://placehold.co/600x400.png",
-    alt: "Passeio do grupo no parque",
-    hint: "seniors park",
-    title: "Passeio no Parque",
-    description: "Manhãs de sol, ar fresco e boa companhia durante nossas caminhadas."
+    alt: "Grupo celebrando o carnaval",
+    hint: "seniors carnival",
+    title: "Carnaval",
+    description: "Folia, fantasias e marchinhas para celebrar a maior festa popular com muita alegria contagiante."
   },
   {
     src: "https://placehold.co/600x400.png",
-    alt: "Oficina de artesanato",
-    hint: "seniors craft",
-    title: "Arte e Criatividade",
-    description: "Descobrindo talentos e criando peças únicas em nossas oficinas."
+    alt: "Grupo em um baile dos anos 60",
+    hint: "seniors 60s party",
+    title: "Baile dos Anos 60",
+    description: "Uma viagem no tempo com os maiores sucessos dos anos dourados, relembrando grandes momentos."
   },
   {
     src: "https://placehold.co/600x400.png",
-    alt: "Comemoração de aniversário",
-    hint: "seniors party",
-    title: "Celebrando a Vida",
-    description: "Cada aniversário é um motivo para festejar em grande estilo."
+    alt: "Grupo praticando atividade física",
+    hint: "seniors exercising",
+    title: "Atividade Física",
+    description: "Cuidando da saúde e do bem-estar com exercícios em grupo, sempre com disposição e energia."
   },
   {
     src: "https://placehold.co/600x400.png",
-    alt: "Grupo jogando cartas",
-    hint: "seniors playing cards",
-    title: "Tarde de Jogos",
-    description: "Jogos de cartas e tabuleiro para exercitar a mente e dar boas risadas."
+    alt: "Grupo em uma festa junina",
+    hint: "seniors june party",
+    title: "Arraiá",
+    description: "A tradição e a alegria das festas juninas com muita diversão, comidas típicas e danças."
   },
 ];
 
@@ -76,13 +76,13 @@ export function GallerySection() {
                 <h3 className="font-headline text-xl font-bold text-accent-foreground">{image.title}</h3>
                 <p className="mt-2 text-accent-foreground/80">{image.description}</p>
               </CardContent>
-              <CardFooter className="p-6 pt-0">
-                <Button asChild className="rounded-full bg-primary text-white hover:bg-primary/90">
-                  <Link href="#">Ver fotos</Link>
-                </Button>
-              </CardFooter>
             </Card>
           ))}
+        </div>
+        <div className="mt-12 text-center">
+            <Button asChild size="lg" className="rounded-full bg-primary text-white hover:bg-primary/90 shadow-md">
+                <Link href="https://drive.google.com/drive/u/1/folders/1HS_Uz9OxE4reZVVas-c4FXnrLGFm33GJ" target="_blank" rel="noopener noreferrer">Ver tudo</Link>
+            </Button>
         </div>
       </div>
     </section>
