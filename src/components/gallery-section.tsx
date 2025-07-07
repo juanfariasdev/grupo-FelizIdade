@@ -63,7 +63,7 @@ export function GallerySection() {
         <div className="text-center space-y-4">
           <div className="inline-block rounded-lg bg-white/30 px-3 py-1 text-sm font-medium text-accent-foreground">Galeria</div>
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-accent-foreground">Nossos Momentos Felizes</h2>
-          <p className="max-w-2xl mx-auto text-accent-foreground/90 md:text-lg">
+          <p className="max-w-2xl mx-auto text-accent-foreground/90 text-lg">
             Uma imagem vale mais que mil palavras. Explore os momentos de alegria e companheirismo que compartilhamos.
           </p>
         </div>
@@ -82,7 +82,7 @@ export function GallerySection() {
               </div>
               <CardContent className="flex-grow p-6">
                 <h3 className="font-headline text-xl font-bold text-accent-foreground">{image.title}</h3>
-                <p className="mt-2 text-accent-foreground/80">{image.description}</p>
+                <p className="mt-2 text-accent-foreground/80 text-base">{image.description}</p>
               </CardContent>
             </Card>
           ))}

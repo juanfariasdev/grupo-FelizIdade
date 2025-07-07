@@ -8,7 +8,7 @@ export function AboutSection() {
       <div className="container mx-auto max-w-5xl space-y-12 px-4 md:px-6">
         <div className="space-y-4 text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">SOBRE NÓS</h2>
-          <p className="mx-auto max-w-3xl md:text-lg">
+          <p className="mx-auto max-w-3xl text-lg">
             O Grupo FelizIdade é uma iniciativa da Secretaria de Saúde de Machado, MG, criada para promover o envelhecimento ativo e saudável. Nosso propósito é oferecer um espaço​ de convivência, aprendizado e troca de experiências, onde os idosos possam se sentir valorizados e integrados à comunidade. Através de atividades recreativas, educativas e sociais, buscamos fortalecer os vínculos familiares e comunitários, contribuindo para uma vida mais feliz e plena.
           </p>
         </div>
@@ -16,7 +16,7 @@ export function AboutSection() {
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div className="order-2 md:order-1 space-y-4 text-left">
               <h3 className="font-headline text-3xl font-bold">Nossa Missão</h3>
-              <p>
+              <p className="text-lg">
                 Nossa missão é proporcionar um ambiente acolhedor e estimulante, onde os idosos possam desfrutar de uma vida ativa, saudável e cheia de significado. Queremos fortalecer os vínculos sociais, promover o aprendizado contínuo e valorizar a experiência de cada participante, contribuindo para um envelhecimento com qualidade e alegria.
               </p>
             </div>
@@ -44,7 +44,7 @@ export function AboutSection() {
             </div>
             <div className="space-y-4 text-left">
               <h3 className="font-headline text-3xl font-bold">Nossos Valores</h3>
-              <ul className="space-y-2 list-disc pl-5">
+              <ul className="space-y-2 list-disc pl-5 text-lg">
                 <li><strong>Respeito:</strong> Valorizamos a trajetória e a individualidade de cada idoso.</li>
                 <li><strong>Inclusão:</strong> Promovemos atividades que atendem a diferentes interesses e capacidades.</li>
                 <li><strong>Companheirismo:</strong> Criamos um espaço de amizade, solidariedade e apoio mútuo.</li>

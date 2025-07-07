@@ -22,13 +22,13 @@ export function ContactSection() {
         <div className="space-y-6">
           <div className="space-y-2">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Seja você também um integrante do Grupo FelizIdade!</h2>
-            <p className="text-accent-foreground/90 md:text-lg">
+            <p className="text-accent-foreground/90 text-lg">
               Preencha o formulário abaixo para entrar em contato. Se preferir, fale conosco pelo WhatsApp ou venha nos visitar.
             </p>
           </div>
-          <div>
+          <div className="space-y-4">
             <ContactForm />
-            <a href="https://wa.me/553532957045" target="_blank" rel="noopener noreferrer" className="w-full block mt-4">
+            <a href="https://wa.me/553532957045" target="_blank" rel="noopener noreferrer" className="w-full block">
               <Button className="w-full bg-[#25D366] hover:bg-[#1EBE57] text-white">
                 <WhatsAppIcon className="h-5 w-5 mr-2"/>
                 Entrar em contato pelo WhatsApp
@@ -53,22 +53,22 @@ export function ContactSection() {
             <div className="flex items-start gap-4">
               <MapPin className="h-6 w-6 text-accent-foreground flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-semibold">Endereço</h3>
-                <a className="text-accent-foreground/90" href="https://maps.app.goo.gl/kbD5gE7jhiL2cFgq9" target="_blank">Praça Antônio Carlos, 101 - Centro, Machado - MG, 37750-000</a>
+                <h3 className="font-semibold text-lg">Endereço</h3>
+                <a className="text-accent-foreground/90 text-lg" href="https://maps.app.goo.gl/kbD5gE7jhiL2cFgq9" target="_blank">Praça Antônio Carlos, 101 - Centro, Machado - MG, 37750-000</a>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <Phone className="h-6 w-6 text-accent-foreground flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-semibold">Telefone</h3>
-                <a className="text-accent-foreground/90" href="tel:3532957045">(35) 3295-7045</a>
+                <h3 className="font-semibold text-lg">Telefone</h3>
+                <a className="text-accent-foreground/90 text-lg" href="tel:3532957045">(35) 3295-7045</a>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <Globe className="h-6 w-6 text-accent-foreground flex-shrink-0" />
               <div>
-                <h3 className="font-semibold">Site</h3>
-                <a href="https://www.machado.mg.gov.br" target="_blank" rel="noopener noreferrer" className="text-accent-foreground/90 hover:text-accent-foreground transition-colors">
+                <h3 className="font-semibold text-lg">Site</h3>
+                <a href="https://www.machado.mg.gov.br" target="_blank" rel="noopener noreferrer" className="text-accent-foreground/90 hover:text-accent-foreground transition-colors text-lg">
                   www.machado.mg.gov.br
                 </a>
               </div>

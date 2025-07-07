@@ -24,7 +24,7 @@ export function ResourcesSection() {
         <div className="text-center space-y-4">
           <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground">Recursos</div>
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Links Úteis</h2>
-          <p className="max-w-2xl mx-auto text-gray-600 md:text-lg">
+          <p className="max-w-2xl mx-auto text-gray-600 text-lg">
             Acesse informações e serviços importantes para o seu bem-estar.
           </p>
         </div>
@@ -38,10 +38,10 @@ export function ResourcesSection() {
                 <CardTitle className="text-lg font-headline">{resource.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600">{resource.description}</p>
+                <p className="text-base text-gray-600">{resource.description}</p>
               </CardContent>
               <CardFooter>
-                <Button variant="link" asChild className="p-0 h-auto text-primary">
+                <Button variant="link" asChild className="p-0 h-auto text-primary text-base">
                   <a href={resource.href} target="_blank" rel="noopener noreferrer">
                     Acessar Recurso
                   </a>

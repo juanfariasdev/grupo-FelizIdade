@@ -36,7 +36,7 @@ export function Header() {
         
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-4 md:flex">
-            <nav className="flex items-center gap-6 text-sm font-medium">
+            <nav className="flex items-center gap-6 text-base font-medium">
                 <Link href="#about" className="transition-colors hover:text-primary">Sobre Nós</Link>
                 <Link href="#gallery" className="transition-colors hover:text-primary">Galeria</Link>
                 <Link href="#events" className="transition-colors hover:text-primary">Eventos</Link>

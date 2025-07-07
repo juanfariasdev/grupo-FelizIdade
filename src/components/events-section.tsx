@@ -33,7 +33,7 @@ export function EventsSection() {
         <div className="text-center space-y-4">
           <div className="inline-block rounded-lg bg-white/20 px-3 py-1 text-sm font-medium">Eventos</div>
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Programação Semanal</h2>
-          <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
+          <p className="max-w-2xl mx-auto text-white/90 text-lg">
             Mantenha-se informado sobre as nossas atividades semanais, planejadas para promover a saúde e o convívio social. Confira a agenda e participe!
           </p>
         </div>
@@ -49,9 +49,9 @@ export function EventsSection() {
             <TableBody>
               {schedule.map((item, index) => (
                 <TableRow key={index} className="border-b-white/30 last:border-0 hover:bg-white/10">
-                  <TableCell className="font-medium">{item.days}</TableCell>
-                  <TableCell>{item.time}</TableCell>
-                  <TableCell>{item.location}</TableCell>
+                  <TableCell className="font-medium text-base">{item.days}</TableCell>
+                  <TableCell className="text-base">{item.time}</TableCell>
+                  <TableCell className="text-base">{item.location}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

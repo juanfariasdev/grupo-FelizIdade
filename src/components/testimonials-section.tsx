@@ -20,7 +20,7 @@ export function TestimonialsSection() {
         <div className="text-center space-y-4">
           <div className="inline-block rounded-lg bg-white/20 px-3 py-1 text-sm font-medium">Depoimentos</div>
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Histórias que Inspiram</h2>
-          <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
+          <p className="max-w-2xl mx-auto text-white/90 text-lg">
             Veja o que nossos membros dizem sobre fazer parte da nossa comunidade.
           </p>
         </div>
@@ -34,11 +34,11 @@ export function TestimonialsSection() {
             <CardFooter className="p-0 mt-6 flex items-center gap-4">
               <Avatar className="h-12 w-12 border-2 border-white/30">
                 <AvatarImage src={`https://placehold.co/48x48.png`} alt={`Foto de ${selectedTestimonial?.name}`} data-ai-hint="woman portrait" />
-                <AvatarFallback className="bg-black/20 font-semibold">{selectedTestimonial?.avatar}</AvatarFallback>
+                <AvatarFallback className="bg-black/20 font-semibold text-white">{selectedTestimonial?.avatar}</AvatarFallback>
               </Avatar>
               <div>
-                <p className="font-semibold">{selectedTestimonial?.name}</p>
-                <p className="text-sm text-white/80">Membro do Grupo</p>
+                <p className="font-semibold text-white">{selectedTestimonial?.name}</p>
+                <p className="text-base text-white/80">Membro do Grupo</p>
               </div>
             </CardFooter>
           </Card>
@@ -50,11 +50,11 @@ export function TestimonialsSection() {
                   <div className="flex items-start gap-4">
                     <Avatar>
                       <AvatarImage src={`https://placehold.co/40x40.png`} alt={`Foto de ${testimonial.name}`} data-ai-hint="person portrait" />
-                      <AvatarFallback className="bg-black/20 font-semibold">{testimonial.avatar}</AvatarFallback>
+                      <AvatarFallback className="bg-black/20 font-semibold text-white">{testimonial.avatar}</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="font-semibold">{testimonial.name}</p>
-                      <p className="text-white/80 text-sm mt-2">“{testimonial.text}”</p>
+                      <p className="font-semibold text-white">{testimonial.name}</p>
+                      <p className="text-white/80 text-base mt-2">“{testimonial.text}”</p>
                     </div>
                   </div>
                 </CardContent>

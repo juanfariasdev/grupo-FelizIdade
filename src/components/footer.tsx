@@ -17,7 +17,7 @@ export function Footer() {
             className="h-10 w-auto"
           />
         </Link>
-        <p className="text-sm text-gray-500 text-center">
+        <p className="text-base text-gray-500 text-center">
           © {new Date().getFullYear()} Grupo FelizIdade. Todos os direitos reservados.
           <br/>
           Site produzido por <a href="https://juanpablofarias.com" className="underline" target="_blank">Alunos do de Bacharel em Sistemas de Informação</a> - IF Sul de Minas Campus Machado
