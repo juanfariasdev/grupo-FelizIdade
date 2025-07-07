@@ -2,6 +2,8 @@ import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import { cn } from '@/lib/utils';
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 
 export const metadata: Metadata = {
   title: 'Grupo FelizIdade',
@@ -20,8 +22,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={cn("font-body antialiased")}>
-        {children}
+      <body className={cn("font-body antialiased flex flex-col min-h-dvh bg-background text-gray-800")}>
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
         <Toaster />
       </body>
     </html>
