@@ -25,7 +25,7 @@ export function TestimonialsSection() {
           </p>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-1 lg:grid-cols-3">
-          <Card className="lg:col-span-2 flex flex-col justify-center bg-white/10 border-white/20 p-8 rounded-xl shadow-lg">
+          <Card className="lg:col-span-2 flex flex-col justify-center bg-white/10 border-white/20 p-8 rounded-xl shadow-lg text-white">
             <CardContent className="p-0">
               <blockquote className="text-xl md:text-2xl font-headline font-semibold leading-snug">
                 “{inspiringTestimonial}”
@@ -34,7 +34,7 @@ export function TestimonialsSection() {
             <CardFooter className="p-0 mt-6 flex items-center gap-4">
               <Avatar className="h-12 w-12 border-2 border-white/30">
                 <AvatarImage src={`https://placehold.co/48x48.png`} data-ai-hint="woman portrait" />
-                <AvatarFallback>{selectedTestimonial?.avatar}</AvatarFallback>
+                <AvatarFallback className="bg-black/20 font-semibold">{selectedTestimonial?.avatar}</AvatarFallback>
               </Avatar>
               <div>
                 <p className="font-semibold">{selectedTestimonial?.name}</p>
@@ -45,12 +45,12 @@ export function TestimonialsSection() {
 
           <div className="space-y-8">
             {otherTestimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white/10 rounded-xl shadow-md border-white/20">
+              <Card key={index} className="bg-white/10 rounded-xl shadow-md border-white/20 text-white">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <Avatar>
                       <AvatarImage src={`https://placehold.co/40x40.png`} data-ai-hint="person portrait" />
-                      <AvatarFallback>{testimonial.avatar}</AvatarFallback>
+                      <AvatarFallback className="bg-black/20 font-semibold">{testimonial.avatar}</AvatarFallback>
                     </Avatar>
                     <div>
                       <p className="font-semibold">{testimonial.name}</p>
