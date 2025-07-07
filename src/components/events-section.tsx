@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const schedule = [
   { days: "Segunda/Quarta", time: "7:30", location: "Atividade Física - PSF Gruta" },
@@ -34,7 +36,7 @@ export function EventsSection() {
             Confira nossa programação semanal de atividades físicas. Mantenha-se ativo e saudável conosco!
           </p>
         </div>
-        <Card className="mt-12 shadow-lg rounded-xl bg-white/10 border-white/20 backdrop-blur-sm">
+        <Card className="mt-12 shadow-lg rounded-xl bg-white/10 border-white/20 backdrop-blur-sm text-white">
           <Table>
             <TableHeader>
               <TableRow className="border-b-white/30 hover:bg-white/10">
@@ -54,6 +56,11 @@ export function EventsSection() {
             </TableBody>
           </Table>
         </Card>
+        <div className="mt-8 text-center">
+          <Button asChild size="lg" className="bg-accent text-white hover:bg-accent/90 shadow-md">
+            <Link href="#contact">Fale conosco</Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
