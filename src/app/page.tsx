@@ -114,7 +114,7 @@ export default function Home() {
                       <Button asChild size="lg" className="shadow-md">
                           <Link href="#contact">Quero Participar</Link>
                       </Button>
-                      <Button asChild size="lg" className="shadow-sm">
+                      <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
                           <Link href="#about">Saiba Mais</Link>
                       </Button>
                   </div>
@@ -123,29 +123,53 @@ export default function Home() {
         </section>
 
         <section id="about" className="w-full py-16 md:py-24 bg-primary text-primary-foreground">
-          <div className="container mx-auto max-w-4xl space-y-8 px-4 text-center md:px-6">
-            <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-primary-foreground/10 px-3 py-1 text-sm font-medium">Sobre Nós</div>
-              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Conectando Gerações com Alegria</h2>
-              <p className="mx-auto max-w-3xl md:text-xl">
-                O Grupo FelizIdade nasceu do desejo de criar um ambiente acolhedor e vibrante para a terceira idade, onde cada membro é parte essencial de nossa grande família.
+          <div className="container mx-auto max-w-5xl space-y-12 px-4 md:px-6">
+            <div className="space-y-4 text-center">
+              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">SOBRE NÓS</h2>
+              <p className="mx-auto max-w-3xl md:text-lg">
+                O Grupo FelizIdade é uma iniciativa da Secretaria de Saúde de Machado, MG, criada para promover o envelhecimento ativo e saudável. Nosso propósito é oferecer um espaço de convivência, aprendizado e troca de experiências, onde os idosos possam se sentir valorizados e integrados à comunidade. Através de atividades recreativas, educativas e sociais, buscamos fortalecer os vínculos familiares e comunitários, contribuindo para uma vida mais feliz e plena.
               </p>
             </div>
-            <div className="grid gap-8 pt-6 md:grid-cols-2">
-              <div className="space-y-2 text-left">
-                <h3 className="font-headline text-2xl font-bold text-center md:text-left">Nossa Missão</h3>
-                <p>
-                  Promover o bem-estar, a socialização e o aprendizado contínuo, oferecendo atividades que enriquecem o corpo, a mente e a alma de nossos membros.
-                </p>
+            <div className="space-y-16">
+              <div className="grid gap-8 md:grid-cols-2 md:items-center">
+                <div className="order-2 md:order-1 space-y-4 text-left">
+                  <h3 className="font-headline text-3xl font-bold">Nossa Missão</h3>
+                  <p>
+                    Nossa missão é proporcionar um ambiente acolhedor e estimulante, onde os idosos possam desfrutar de uma vida ativa, saudável e cheia de significado. Queremos fortalecer os vínculos sociais, promover o aprendizado contínuo e valorizar a experiência de cada participante, contribuindo para um envelhecimento com qualidade e alegria.
+                  </p>
+                </div>
+                <div className="order-1 md:order-2">
+                  <Image
+                    src="https://placehold.co/600x400.png"
+                    width={600}
+                    height={400}
+                    alt="Grupo de idosos em atividade comunitária"
+                    className="rounded-lg shadow-xl"
+                    data-ai-hint="seniors community"
+                  />
+                </div>
               </div>
-              <div className="space-y-2 text-left">
-                <h3 className="font-headline text-2xl font-bold text-center md:text-left">Nossos Valores</h3>
-                <ul className="list-disc list-inside space-y-1">
-                  <li>Acolhimento e Empatia</li>
-                  <li>Respeito e Amizade</li>
-                  <li>Alegria de Viver</li>
-                  <li>Companheirismo</li>
-                </ul>
+              <div className="grid gap-8 md:grid-cols-2 md:items-center">
+                <div>
+                   <Image
+                    src="https://placehold.co/600x400.png"
+                    width={600}
+                    height={400}
+                    alt="Idosos sorrindo e se abraçando"
+                    className="rounded-lg shadow-xl"
+                    data-ai-hint="seniors smiling"
+                  />
+                </div>
+                <div className="space-y-4 text-left">
+                  <h3 className="font-headline text-3xl font-bold">Nossos Valores</h3>
+                  <ul className="space-y-2">
+                    <li><strong>Respeito:</strong> Valorizamos a trajetória e a individualidade de cada idoso.</li>
+                    <li><strong>Inclusão:</strong> Promovemos atividades que atendem a diferentes interesses e capacidades.</li>
+                    <li><strong>Companheirismo:</strong> Criamos um espaço de amizade, solidariedade e apoio mútuo.</li>
+                    <li><strong>Saúde e Bem-estar:</strong> Focamos em atividades que estimulam a saúde física e mental.</li>
+                    <li><strong>Integração:</strong> Incentivamos a participação dos idosos na comunidade, fortalecendo sua conexão com a sociedade.</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -161,9 +185,9 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="mt-12 grid gap-8 md:grid-cols-1 lg:grid-cols-3">
-                    <Card className="lg:col-span-2 flex flex-col justify-center bg-primary/10 border-primary/20 p-8 rounded-xl shadow-lg">
+                    <Card className="lg:col-span-2 flex flex-col justify-center bg-red-100/50 border-primary/20 p-8 rounded-xl shadow-lg">
                         <CardContent className="p-0">
-                            <blockquote className="text-xl md:text-2xl font-headline font-semibold leading-snug text-primary-foreground">
+                            <blockquote className="text-xl md:text-2xl font-headline font-semibold leading-snug text-gray-800">
                                 “{inspiringTestimonial}”
                             </blockquote>
                         </CardContent>
@@ -173,8 +197,8 @@ export default function Home() {
                                 <AvatarFallback>{selectedTestimonial?.avatar}</AvatarFallback>
                             </Avatar>
                             <div>
-                                <p className="font-semibold text-primary-foreground">{selectedTestimonial?.name}</p>
-                                <p className="text-sm text-primary-foreground/80">Membro do Grupo</p>
+                                <p className="font-semibold text-gray-800">{selectedTestimonial?.name}</p>
+                                <p className="text-sm text-gray-600">Membro do Grupo</p>
                             </div>
                         </CardFooter>
                     </Card>
