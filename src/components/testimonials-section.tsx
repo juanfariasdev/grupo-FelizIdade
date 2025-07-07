@@ -15,37 +15,37 @@ export function TestimonialsSection() {
   const otherTestimonials = allTestimonials.filter(t => t.text !== inspiringTestimonial).slice(0, 2);
 
   return (
-    <section id="testimonials" className="w-full py-16 md:py-24">
+    <section id="testimonials" className="w-full py-16 md:py-24 bg-[#2A4088] text-white">
       <div className="container mx-auto max-w-7xl px-4 md:px-6">
         <div className="text-center space-y-4">
-          <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground">Depoimentos</div>
+          <div className="inline-block rounded-lg bg-white/20 px-3 py-1 text-sm font-medium">Depoimentos</div>
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Histórias que Inspiram</h2>
-          <p className="max-w-2xl mx-auto text-gray-600 md:text-lg">
+          <p className="max-w-2xl mx-auto text-white/90 md:text-lg">
             Veja o que nossos membros dizem sobre fazer parte da nossa comunidade.
           </p>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-1 lg:grid-cols-3">
-          <Card className="lg:col-span-2 flex flex-col justify-center bg-red-100/50 border-primary/20 p-8 rounded-xl shadow-lg">
+          <Card className="lg:col-span-2 flex flex-col justify-center bg-white/10 border-white/20 p-8 rounded-xl shadow-lg">
             <CardContent className="p-0">
-              <blockquote className="text-xl md:text-2xl font-headline font-semibold leading-snug text-gray-800">
+              <blockquote className="text-xl md:text-2xl font-headline font-semibold leading-snug">
                 “{inspiringTestimonial}”
               </blockquote>
             </CardContent>
             <CardFooter className="p-0 mt-6 flex items-center gap-4">
-              <Avatar className="h-12 w-12 border-2 border-primary/30">
+              <Avatar className="h-12 w-12 border-2 border-white/30">
                 <AvatarImage src={`https://placehold.co/48x48.png`} data-ai-hint="woman portrait" />
                 <AvatarFallback>{selectedTestimonial?.avatar}</AvatarFallback>
               </Avatar>
               <div>
-                <p className="font-semibold text-gray-800">{selectedTestimonial?.name}</p>
-                <p className="text-sm text-gray-600">Membro do Grupo</p>
+                <p className="font-semibold">{selectedTestimonial?.name}</p>
+                <p className="text-sm text-white/80">Membro do Grupo</p>
               </div>
             </CardFooter>
           </Card>
 
           <div className="space-y-8">
             {otherTestimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-card rounded-xl shadow-md">
+              <Card key={index} className="bg-white/10 rounded-xl shadow-md border-white/20">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <Avatar>
@@ -53,8 +53,8 @@ export function TestimonialsSection() {
                       <AvatarFallback>{testimonial.avatar}</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="font-bold">{testimonial.name}</p>
-                      <p className="text-gray-600 text-sm mt-2">“{testimonial.text}”</p>
+                      <p className="font-semibold">{testimonial.name}</p>
+                      <p className="text-white/80 text-sm mt-2">“{testimonial.text}”</p>
                     </div>
                   </div>
                 </CardContent>
