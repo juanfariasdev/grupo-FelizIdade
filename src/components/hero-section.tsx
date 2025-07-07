@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import IdososBackground from "../assets/idosos_background.png";
 
 export function HeroSection() {
   return (
     <section className="relative w-full h-[70vh] min-h-[500px] flex items-center justify-center">
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src="https://placehold.co/1920x1080.png"
+          src={IdososBackground}
           alt="Grupo de idosos felizes"
           fill={true}
           className="object-cover"

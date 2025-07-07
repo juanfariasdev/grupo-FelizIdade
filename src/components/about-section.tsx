@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Missao from "../assets/missao.jpg";
+import Valor from "../assets/valor.jpg";
 
 export function AboutSection() {
   return (
@@ -20,7 +22,7 @@ export function AboutSection() {
             </div>
             <div className="order-1 md:order-2">
               <Image
-                src="https://placehold.co/600x400.png"
+                src={Missao}
                 width={600}
                 height={400}
                 alt="Grupo de idosos em atividade comunitária"
@@ -32,7 +34,7 @@ export function AboutSection() {
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div>
               <Image
-                src="https://placehold.co/600x400.png"
+                src={Valor}
                 width={600}
                 height={400}
                 alt="Idosos sorrindo e se abraçando"
