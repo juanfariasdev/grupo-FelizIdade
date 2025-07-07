@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Cronograma from "../assets/cronograma.jpg"
 
 const schedule = [
   { days: "Segunda/Quarta", time: "7:30", location: "Atividade Física - PSF Gruta" },
@@ -19,7 +20,7 @@ export function EventsSection() {
     <section id="events" className="relative w-full py-16 md:py-24">
         <div className="absolute inset-0">
             <Image
-            src="https://placehold.co/1920x1080.png"
+            src={Cronograma}
             alt="Idosos se exercitando em um parque"
             fill
             className="object-cover"

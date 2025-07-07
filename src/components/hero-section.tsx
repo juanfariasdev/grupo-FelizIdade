@@ -12,6 +12,7 @@ export function HeroSection() {
           alt="Grupo de idosos felizes"
           fill={true}
           className="object-cover"
+          priority={true}
           data-ai-hint="happy seniors group"
         />
         <div className="absolute inset-0 bg-blue-900/70" />

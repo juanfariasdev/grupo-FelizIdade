@@ -38,7 +38,7 @@ export function ContactSection() {
         <div className="space-y-6 flex flex-col h-full">
           <div className="overflow-hidden rounded-xl shadow-lg border border-accent-foreground/20 flex-1">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7415.351620605852!2d-45.921803!3d-21.676465!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ca135d751e224d%3A0x2580060b89fe90d2!2sPra%C3%A7a%20Ant%C3%B4nio%20Carlos%20-%20Machado%2C%20MG%2C%2037750-000!5e0!3m2!1spt-BR!2sbr!4v1751913391285!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3707.690586906206!2d-45.9242411229967!3d-21.675890495046044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ca136a319ab859%3A0x7246f9b74d6f4537!2sSecretaria%20Municipal%20de%20Sa%C3%BAde%20de%20Machado-MG!5e0!3m2!1spt-BR!2sbr!4v1751917469486!5m2!1spt-BR!2sbr"
               className="w-full h-full min-h-[400px]"
               style={{ border: 0 }}
               allowFullScreen={true}
@@ -52,14 +52,14 @@ export function ContactSection() {
               <MapPin className="h-6 w-6 text-accent-foreground flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold">Endereço</h3>
-                <p className="text-accent-foreground/90">Praça Antônio Carlos, 101 - Centro, Machado - MG, 37750-000</p>
+                <a className="text-accent-foreground/90" href="https://maps.app.goo.gl/kbD5gE7jhiL2cFgq9" target="_blank">Praça Antônio Carlos, 101 - Centro, Machado - MG, 37750-000</a>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <Phone className="h-6 w-6 text-accent-foreground flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold">Telefone</h3>
-                <p className="text-accent-foreground/90">(35) 3295-7045</p>
+                <a className="text-accent-foreground/90" href="tel:3532957045">(35) 3295-7045</a>
               </div>
             </div>
             <div className="flex items-start gap-4">

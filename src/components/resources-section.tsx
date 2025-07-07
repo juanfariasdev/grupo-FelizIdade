@@ -4,21 +4,15 @@ import { Heart, Link as LinkIcon, Handshake } from "lucide-react";
 
 const resources = [
   {
-    title: "Portal do Envelhecimento",
-    description: "Notícias, artigos e pesquisas sobre o envelhecimento ativo e saudável.",
-    href: "#",
-    icon: LinkIcon,
-  },
-  {
     title: "Serviços de Saúde Local",
     description: "Encontre informações sobre os postos de saúde e hospitais da região.",
-    href: "#",
+    href: "https://www.google.com/maps/search/psf/@-21.6818261,-45.923356,15z?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D",
     icon: Heart,
   },
   {
     title: "Direitos da Pessoa Idosa",
     description: "Conheça o Estatuto do Idoso e seus direitos como cidadão.",
-    href: "#",
+    href: "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/saude-da-pessoa-idosa/direitos",
     icon: Handshake,
   },
 ];
@@ -34,7 +28,7 @@ export function ResourcesSection() {
             Acesse informações e serviços importantes para o seu bem-estar.
           </p>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {resources.map((resource, index) => (
             <Card key={index} className="bg-background/50 hover:shadow-lg transition-shadow">
               <CardHeader className="flex flex-row items-center gap-4 pb-4">

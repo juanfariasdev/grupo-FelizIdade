@@ -2,45 +2,53 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Piquenique from "../assets/galeria/piquenique.jpg"
+import Forro from "../assets/galeria/forro.png"
+import Carnaval from "../assets/galeria/carnaval.png"
+import Baile from "../assets/galeria/baile-anos-60.jpg"
+import AtvFisica from "../assets/galeria/atv-fisica.jpg"
+import Arraia from "../assets/galeria/arraia.jpg"
+
+
 
 const galleryImages = [
   {
-    src: "https://placehold.co/600x400.png",
+    src: Piquenique,
     alt: "Grupo em um piquenique",
     hint: "seniors picnic",
     title: "Piquenique",
     description: "Momentos de confraternização e alegria ao ar livre, fortalecendo nossos laços de amizade."
   },
   {
-    src: "https://placehold.co/600x400.png",
+    src: Forro,
     alt: "Grupo dançando forró",
     hint: "seniors dancing",
     title: "Forró",
     description: "Muita dança e animação ao som do tradicional forró, celebrando a cultura e o movimento."
   },
   {
-    src: "https://placehold.co/600x400.png",
+    src: Carnaval,
     alt: "Grupo celebrando o carnaval",
     hint: "seniors carnival",
     title: "Carnaval",
     description: "Folia, fantasias e marchinhas para celebrar a maior festa popular com muita alegria contagiante."
   },
   {
-    src: "https://placehold.co/600x400.png",
+    src: Baile,
     alt: "Grupo em um baile dos anos 60",
     hint: "seniors 60s party",
     title: "Baile dos Anos 60",
     description: "Uma viagem no tempo com os maiores sucessos dos anos dourados, relembrando grandes momentos."
   },
   {
-    src: "https://placehold.co/600x400.png",
+    src: AtvFisica,
     alt: "Grupo praticando atividade física",
     hint: "seniors exercising",
     title: "Atividade Física",
     description: "Cuidando da saúde e do bem-estar com exercícios em grupo, sempre com disposição e energia."
   },
   {
-    src: "https://placehold.co/600x400.png",
+    src: Arraia,
     alt: "Grupo em uma festa junina",
     hint: "seniors june party",
     title: "Arraiá",
