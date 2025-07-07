@@ -57,7 +57,7 @@ export function EventsSection() {
           </Table>
         </Card>
         <div className="mt-8 text-center">
-          <Button asChild size="lg" className="bg-accent text-white hover:bg-accent/90 shadow-md">
+          <Button asChild size="lg" className="bg-accent text-white hover:bg-accent/90 shadow-md rounded-full">
             <Link href="#contact">Fale conosco</Link>
           </Button>
         </div>

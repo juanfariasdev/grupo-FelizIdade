@@ -93,7 +93,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className={cn("w-full shadow-md", {
+        <Button type="submit" className={cn("w-full shadow-md rounded-full", {
           'opacity-50 cursor-not-allowed': form.formState.isSubmitting
         })} disabled={form.formState.isSubmitting}>
           {form.formState.isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
