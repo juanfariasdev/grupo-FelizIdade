@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { selectInspiringTestimonial } from '@/ai/flows/select-inspiring-testimonial';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { ContactForm } from "@/components/contact-form";
@@ -66,21 +65,8 @@ const resources = [
   },
 ];
 
-export default async function Home() {
-  const testimonialTexts = allTestimonials.map(t => t.text);
-  let inspiringTestimonial = testimonialTexts[0]; // Default to the first testimonial
-
-  if (process.env.GEMINI_API_KEY) {
-    try {
-      const result = await selectInspiringTestimonial({ testimonials: testimonialTexts });
-      inspiringTestimonial = result.inspiringTestimonial;
-    } catch (error) {
-      console.error('AI call failed. Falling back to the default testimonial.', error);
-    }
-  } else {
-    console.log('GEMINI_API_KEY not found. Using default testimonial.');
-  }
-  
+export default function Home() {
+  const inspiringTestimonial = allTestimonials[0].text;
   const selectedTestimonial = allTestimonials.find(t => t.text === inspiringTestimonial);
   const otherTestimonials = allTestimonials.filter(t => t.text !== inspiringTestimonial).slice(0, 2);
 
