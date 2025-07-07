@@ -3,8 +3,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { ContactForm } from "@/components/contact-form";
-import { Heart, Users, Calendar, Link as LinkIcon, Phone, MapPin, Handshake, Sun, Paintbrush, Music } from "lucide-react";
+import { Heart, Users, Calendar, Link as LinkIcon, Phone, MapPin, Handshake } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 const allTestimonials = [
   { name: "Sílvia Rocha", text: "Participar do Grupo FelizIdade transformou minha vida. Encontrei amigos verdadeiros e novas paixões.", avatar: "SR" },
@@ -59,25 +60,14 @@ const galleryImages = [
   },
 ];
 
-const events = [
-  {
-    date: "25 AGO",
-    title: "Caminhada no Parque",
-    description: "Uma manhã revigorante com uma caminhada leve e um piquenique.",
-    icon: Sun,
-  },
-  {
-    date: "05 SET",
-    title: "Oficina de Pintura",
-    description: "Explore sua criatividade com nossa oficina de pintura em tela.",
-    icon: Paintbrush,
-  },
-  {
-    date: "18 SET",
-    title: "Baile da Primavera",
-    description: "Celebre a chegada da estação com muita música e dança.",
-    icon: Music,
-  },
+const schedule = [
+  { days: "Segunda/Quarta", time: "7:30", location: "Atividade Física - PSF Gruta" },
+  { days: "Segunda/Quarta", time: "8:30", location: "Atividade Física - Salão da Assistência Social" },
+  { days: "Segunda/Quarta", time: "14:00", location: "Atividade Física - PSF Jardim" },
+  { days: "Segunda/Quarta", time: "15:00", location: "Atividade Física - PSF Caic" },
+  { days: "Terça/Quinta", time: "7:30", location: "Atividade Física - Poliesportivo" },
+  { days: "Terça/Quinta", time: "8:30", location: "Atividade Física - Praça da Juventude" },
+  { days: "Terça/Quinta", time: "14:00", location: "Atividade Física - PSF São Benedito" },
 ];
 
 const resources = [
@@ -272,7 +262,7 @@ export default function Home() {
             </div>
             <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {galleryImages.map((image, index) => (
-                <Card key={index} className="overflow-hidden group flex flex-col transition-shadow hover:shadow-xl">
+                <Card key={index} className="overflow-hidden group flex flex-col transition-shadow hover:shadow-xl bg-card">
                   <div className="overflow-hidden">
                     <Image
                       src={image.src}
@@ -299,28 +289,34 @@ export default function Home() {
         </section>
 
         <section id="events" className="w-full py-16 md:py-24">
-          <div className="container mx-auto max-w-7xl px-4 md:px-6">
+          <div className="container mx-auto max-w-4xl px-4 md:px-6">
             <div className="text-center space-y-4">
               <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground">Eventos</div>
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Nossa Agenda</h2>
               <p className="max-w-2xl mx-auto text-gray-600 md:text-lg">
-                Fique por dentro das próximas atividades. Sempre há algo novo e emocionante acontecendo!
+                Confira nossa programação semanal de atividades físicas. Mantenha-se ativo e saudável conosco!
               </p>
             </div>
-            <div className="mt-12 max-w-3xl mx-auto space-y-8">
-                {events.map((event, index) => (
-                    <div key={index} className="flex items-start gap-6 p-4 rounded-lg hover:bg-card transition-colors">
-                        <div className="flex flex-col items-center justify-center bg-primary text-primary-foreground rounded-lg p-4 h-24 w-24 text-center">
-                            <span className="text-3xl font-bold tracking-tighter">{event.date.split(' ')[0]}</span>
-                            <span className="text-sm font-medium uppercase">{event.date.split(' ')[1]}</span>
-                        </div>
-                        <div className="flex-1 pt-2">
-                           <h3 className="text-xl font-bold font-headline">{event.title}</h3>
-                           <p className="text-gray-600 mt-1">{event.description}</p>
-                        </div>
-                    </div>
-                ))}
-            </div>
+            <Card className="mt-12 shadow-lg rounded-xl">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="w-[180px] font-headline text-base">Dias</TableHead>
+                    <TableHead className="w-[120px] font-headline text-base">Horário</TableHead>
+                    <TableHead className="font-headline text-base">Atividade e Local</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {schedule.map((item, index) => (
+                    <TableRow key={index}>
+                      <TableCell className="font-medium">{item.days}</TableCell>
+                      <TableCell>{item.time}</TableCell>
+                      <TableCell>{item.location}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </Card>
           </div>
         </section>
 
