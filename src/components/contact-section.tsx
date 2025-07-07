@@ -29,10 +29,10 @@ export function ContactSection() {
           <div className="space-y-4">
             <ContactForm />
             <a href="https://wa.me/553532957045" target="_blank" rel="noopener noreferrer" className="w-full block">
-              <Button className="w-full bg-[#25D366] hover:bg-[#1EBE57] text-white">
+              {/* <Button className="w-full bg-[#25D366] hover:bg-[#1EBE57] text-white">
                 <WhatsAppIcon className="h-5 w-5 mr-2"/>
                 Entrar em contato pelo WhatsApp
-              </Button>
+              </Button> */}
             </a>
           </div>
         </div>
