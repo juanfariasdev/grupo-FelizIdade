@@ -40,12 +40,12 @@ Para executar uma cópia deste projeto em sua máquina local para desenvolviment
 
 1.  **Clone o repositório:**
     ```bash
-    git clone <url-do-repositorio>
+    git clone https://github.com/juanfariasdev/grupo-FelizIdade.git
     ```
 
 2.  **Navegue até o diretório do projeto:**
     ```bash
-    cd <nome-do-diretorio>
+    cd grupo-FelizIdade
     ```
 
 3.  **Instale as dependências:**
@@ -59,10 +59,6 @@ Para executar uma cópia deste projeto em sua máquina local para desenvolviment
     ```
 
     Abra [http://localhost:9002](http://localhost:9002) no seu navegador para ver o resultado.
-
-## ☁️ Implantação (Deployment)
-
-O site está configurado para ser implantado na **Firebase App Hosting**, garantindo escalabilidade e performance.
 
 ---
 
