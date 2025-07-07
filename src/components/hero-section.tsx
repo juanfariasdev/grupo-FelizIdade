@@ -5,7 +5,7 @@ import IdososBackground from "../assets/idosos_background.png";
 
 export function HeroSection() {
   return (
-    <section className="relative w-full h-[70vh] min-h-[500px] flex items-center justify-center">
+    <section id="home" className="relative w-full h-[70vh] min-h-[500px] flex items-center justify-center">
       <div className="absolute inset-0 w-full h-full">
         <Image
           src={IdososBackground}
