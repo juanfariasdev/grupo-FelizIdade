@@ -15,12 +15,48 @@ const allTestimonials = [
 ];
 
 const galleryImages = [
-  { src: "https://placehold.co/600x400.png", alt: "Grupo em atividade de jardinagem", hint: "seniors gardening" },
-  { src: "https://placehold.co/600x400.png", alt: "Aula de dança para idosos", hint: "seniors dancing" },
-  { src: "https://placehold.co/600x400.png", alt: "Passeio do grupo no parque", hint: "seniors park" },
-  { src: "https://placehold.co/600x400.png", alt: "Oficina de artesanato", hint: "seniors craft" },
-  { src: "https://placehold.co/600x400.png", alt: "Comemoração de aniversário", hint: "seniors party" },
-  { src: "https://placehold.co/600x400.png", alt: "Grupo jogando cartas", hint: "seniors playing cards" },
+  { 
+    src: "https://placehold.co/600x400.png", 
+    alt: "Grupo em atividade de jardinagem", 
+    hint: "seniors gardening",
+    title: "Jardinagem Terapêutica",
+    description: "Conectando-se com a natureza e fortalecendo amizades."
+  },
+  { 
+    src: "https://placehold.co/600x400.png", 
+    alt: "Aula de dança para idosos", 
+    hint: "seniors dancing",
+    title: "Ritmo e Alegria",
+    description: "Nossas aulas de dança mantêm o corpo e a alma em movimento."
+  },
+  { 
+    src: "https://placehold.co/600x400.png", 
+    alt: "Passeio do grupo no parque", 
+    hint: "seniors park",
+    title: "Passeio no Parque",
+    description: "Manhãs de sol, ar fresco e boa companhia durante nossas caminhadas."
+  },
+  { 
+    src: "https://placehold.co/600x400.png", 
+    alt: "Oficina de artesanato", 
+    hint: "seniors craft",
+    title: "Arte e Criatividade",
+    description: "Descobrindo talentos e criando peças únicas em nossas oficinas."
+  },
+  { 
+    src: "https://placehold.co/600x400.png", 
+    alt: "Comemoração de aniversário", 
+    hint: "seniors party",
+    title: "Celebrando a Vida",
+    description: "Cada aniversário é um motivo para festejar em grande estilo."
+  },
+  { 
+    src: "https://placehold.co/600x400.png", 
+    alt: "Grupo jogando cartas", 
+    hint: "seniors playing cards",
+    title: "Tarde de Jogos",
+    description: "Jogos de cartas e tabuleiro para exercitar a mente e dar boas risadas."
+  },
 ];
 
 const events = [
@@ -127,7 +163,7 @@ export default function Home() {
             <div className="space-y-4 text-center">
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">SOBRE NÓS</h2>
               <p className="mx-auto max-w-3xl md:text-lg">
-                O Grupo FelizIdade é uma iniciativa da Secretaria de Saúde de Machado, MG, criada para promover o envelhecimento ativo e saudável. Nosso propósito é oferecer um espaço de convivência, aprendizado e troca de experiências, onde os idosos possam se sentir valorizados e integrados à comunidade. Através de atividades recreativas, educativas e sociais, buscamos fortalecer os vínculos familiares e comunitários, contribuindo para uma vida mais feliz e plena.
+                O Grupo FelizIdade é uma iniciativa da Secretaria de Saúde de Machado, MG, criada para promover o envelhecimento ativo e saudável. Nosso propósito é oferecer um espaço​ de convivência, aprendizado e troca de experiências, onde os idosos possam se sentir valorizados e integrados à comunidade. Através de atividades recreativas, educativas e sociais, buscamos fortalecer os vínculos familiares e comunitários, contribuindo para uma vida mais feliz e plena.
               </p>
             </div>
             <div className="space-y-16">
@@ -162,7 +198,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-4 text-left">
                   <h3 className="font-headline text-3xl font-bold">Nossos Valores</h3>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 list-disc pl-5">
                     <li><strong>Respeito:</strong> Valorizamos a trajetória e a individualidade de cada idoso.</li>
                     <li><strong>Inclusão:</strong> Promovemos atividades que atendem a diferentes interesses e capacidades.</li>
                     <li><strong>Companheirismo:</strong> Criamos um espaço de amizade, solidariedade e apoio mútuo.</li>
@@ -225,7 +261,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section id="gallery" className="w-full py-16 md:py-24 bg-card">
+        <section id="gallery" className="w-full py-16 md:py-24 bg-secondary/50">
           <div className="container mx-auto max-w-7xl px-4 md:px-6">
             <div className="text-center space-y-4">
               <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground">Galeria</div>
@@ -234,18 +270,24 @@ export default function Home() {
                 Uma imagem vale mais que mil palavras. Explore os momentos de alegria e companheirismo que compartilhamos.
               </p>
             </div>
-            <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
+            <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {galleryImages.map((image, index) => (
-                <div key={index} className="overflow-hidden rounded-xl group">
-                  <Image
-                    src={image.src}
-                    width={600}
-                    height={400}
-                    alt={image.alt}
-                    className="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                    data-ai-hint={image.hint}
-                  />
-                </div>
+                <Card key={index} className="overflow-hidden group transition-shadow hover:shadow-xl">
+                  <div className="overflow-hidden">
+                    <Image
+                      src={image.src}
+                      width={600}
+                      height={400}
+                      alt={image.alt}
+                      className="aspect-[3/2] w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                      data-ai-hint={image.hint}
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-headline text-xl font-bold text-card-foreground">{image.title}</h3>
+                    <p className="mt-2 text-muted-foreground">{image.description}</p>
+                  </div>
+                </Card>
               ))}
             </div>
           </div>
