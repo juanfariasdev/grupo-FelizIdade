@@ -1,8 +1,17 @@
 # Grupo FelizIdade
 
-![Logo do Grupo FelizIdade](./src/assets/logo.png)
+<table>
+  <tr>
+    <td style="width: 100px; vertical-align: top; padding-right: 12px;">
+      <img src="./src/assets/logo.png" alt="Logo do Grupo FelizIdade" width="120" height="120" />
+    </td>
+    <td style="vertical-align: middle;">
+      Este é o site oficial do <b>Grupo FelizIdade</b>, uma iniciativa da Secretaria de Saúde de Machado-MG,
+      dedicada a promover o bem-estar, a integração e o envelhecimento ativo e saudável para os idosos da comunidade.
+    </td>
+  </tr>
+</table>
 
-Este é o site oficial do **Grupo FelizIdade**, uma iniciativa da Secretaria de Saúde de Machado, MG, dedicada a promover o bem-estar, a integração e o envelhecimento ativo e saudável para os idosos da comunidade.
 
 ## ✨ Funcionalidades
 
@@ -63,3 +72,10 @@ Para executar uma cópia deste projeto em sua máquina local para desenvolviment
 ---
 
 Projeto desenvolvido com carinho para a comunidade de Machado, MG.
+
+## 🏋️‍♀️ Responsáveis
+
+- Juan Pablo Farias - [@JuanFariasDev](https://github.com/juanfariasdev/)
+- Daiana da Cunha Mendes - [@DaianaMendesss](https://github.com/daianamendesss)
+- Arielce José Pereira Junior - [@ArielceJunior](https://github.com/ArielceJunior)
+- Aryane Machado - [@AryaneMachado](https://github.com/AryaneMachado)
